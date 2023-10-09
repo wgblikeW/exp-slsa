@@ -2,7 +2,7 @@ name: Publish
 on: [push]
 env:
   IMAGE_REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: wgblikeW/exp-slsa
 
 jobs:
   # This step builds our image, pushes it, and outputs the repo hash digest.
@@ -60,7 +60,7 @@ jobs:
       packages: write # for uploading attestations.
     uses: slsa-framework/slsa-github-generator/.github/workflows/generator_container_slsa3.yml@v1.9.0
     with:
-      image: "${{ needs.build.outputs.image }}:master"
+      image: "${{ needs.build.outputs.image }}"
       digest: ${{ needs.build.outputs.digest }}
       registry-username: ${{ github.actor }}
     secrets:
