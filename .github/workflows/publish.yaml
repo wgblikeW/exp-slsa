@@ -2,7 +2,7 @@ name: Publish
 on: [push]
 env:
   IMAGE_REGISTRY: ghcr.io
-  IMAGE_NAME: "wgblikew/slsa-exp"
+  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   # This step builds our image, pushes it, and outputs the repo hash digest.
