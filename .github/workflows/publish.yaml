@@ -2,7 +2,7 @@ name: Publish
 on: [push]
 env:
   IMAGE_REGISTRY: ghcr.io
-  IMAGE_NAME: wgblikeW/exp-slsa
+  IMAGE_NAME: wgblikew/exp-slsa:master
 
 jobs:
   # This step builds our image, pushes it, and outputs the repo hash digest.
